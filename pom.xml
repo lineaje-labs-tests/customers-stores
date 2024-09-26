@@ -22,7 +22,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<spring-cloud.version>Finchley.BUILD-SNAPSHOT</spring-cloud.version>
+		<spring-cloud.version>2020.0.6</spring-cloud.version>
 		<docker.image.prefix>springcloud</docker.image.prefix>
 	</properties>
 
@@ -35,6 +35,11 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+                <dependency>
+                        <groupId>org.bouncycastle</groupId>
+                        <artifactId>bcpkix-jdk15on</artifactId>
+                        <version>1.70.lineaje-01</version>
+                </dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -59,14 +64,17 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+      <version>2.0.2.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-cloudfoundry</artifactId>
+      <version>2.0.2.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-netflix-hystrix-stream</artifactId>
+      <version>2.0.2.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
